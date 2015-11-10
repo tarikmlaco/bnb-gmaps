@@ -30,7 +30,7 @@ var common = {
   },
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Kanban app'
+      title: 'MopPlaces, Soon To Be'
     })
   ]
 };
