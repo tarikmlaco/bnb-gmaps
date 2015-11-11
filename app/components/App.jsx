@@ -26,6 +26,7 @@ export default class App extends React.Component {
 		//Note to self: Always bind 'this', so it wouldn't point at a wrong object.
 		this.addNote = this.addNote.bind(this);
 		this.editNote = this.editNote.bind(this);
+		this.deleteNote = this.deleteNote.bind(this);
 	}
 
 	render() {
@@ -35,7 +36,7 @@ export default class App extends React.Component {
 		return (
 			<div>
 				<button className="add-note" onClick={this.addNote}>+</button>
-				<Notes items={notes} onEdit={this.editNote}/>
+				<Notes items={notes} onEdit={this.editNote} onDelete={this.deleteNote}/>
 			</div>
 		);
 	}
@@ -71,5 +72,16 @@ export default class App extends React.Component {
 		}
 
 		return noteIndex;
+	}
+
+	deleteNote(id) {
+		const notes = this.state.notes;
+		const noteIndex = notes.findIndex((note) => note.id === id);
+
+		if(noteIndex < 0){
+			return;
+		}
+
+		this.setState(notes.splice(noteIndex, 1));
 	}
 }
