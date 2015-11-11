@@ -11,7 +11,7 @@ export default class Note extends React.Component {
 		this.renderTask = this.renderTask.bind(this);
 
 		this.state = {
-			editing: false;
+			editing: false
 		};
 	}
 
@@ -21,6 +21,39 @@ export default class Note extends React.Component {
 		//Note to self: state must be immutable, use const
 		const editing = this.state.editing;
 
-		return <div>{this.props.task}</div>;
+		return (
+		<div>
+			{editing ? this.renderEdit() : this.renderTask()}
+		</div>);
+	}
+
+	edit() {
+		this.setState({
+			editing: true
+		});
+	}
+
+	renderEdit() {
+		return <input type="text" autoFocus={true} defaultValue={this.props.task} onBlur={this.finishEdit} onKeyPress={this.checkEnter}/>;
+	}
+
+	renderTask() {
+		return <div onClick={this.edit}>{this.props.task}</div>;
+	}
+
+	finishEdit(e) {
+		console.log('editing finished');
+		
+		this.props.onEdit(e.target.value);
+
+		this.setState({
+			editing: false
+		});
+	}
+
+	checkEnter(e) {
+		if(e.key === 'Enter'){
+			this.finishEdit(e);
+		}
 	}
 }
