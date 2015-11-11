@@ -23,6 +23,7 @@ export default class App extends React.Component {
 			]
 		};
 
+		//Note to self: Always bind 'this', so it wouldn't point at a wrong object.
 		this.addNote = this.addNote.bind(this);
 	}
 
