@@ -28,6 +28,7 @@ export default class App extends React.Component {
 	}
 
 	render() {
+		//Note to self: keep the state immutable
 		const notes = this.state.notes;
 
 		return (
