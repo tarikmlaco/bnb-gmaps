@@ -1,11 +1,14 @@
 // import uuid from 'node-uuid';
+import AltContainer from 'alt-container';
 import React from 'react';
 import Notes from './Notes.jsx';
 import NoteActions from '../actions/NoteActions';
 import NoteStore from '../stores/NoteStore';
 
 export default class App extends React.Component {
-	constructor(props) {
+/*	
+
+constructor(props) {
 		super(props);
 
 		// this.state = {
@@ -46,14 +49,17 @@ export default class App extends React.Component {
 		this.setState(state);
 	}
 
+*/
 	render() {
 		//Note to self: keep the state immutable
-		const notes = this.state.notes;
+		// const notes = this.state.notes;
 
 		return (
 			<div>
 				<button className="add-note" onClick={this.addNote}>+</button>
-				<Notes items={notes} onEdit={this.editNote} onDelete={this.deleteNote}/>
+				<AltContainer stores={[NoteStore]} inject={{ items: () => NoteStore.getState().notes }}>
+					<Notes /*items={notes}*/ onEdit={this.editNote} onDelete={this.deleteNote}/>
+				</AltContainer>
 			</div>
 		);
 	}
