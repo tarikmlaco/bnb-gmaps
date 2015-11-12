@@ -6,7 +6,7 @@ export default {
 		catch(e) {
 			return null;
 		}
-	}
+	},
 
 	set: function(k, v) {
 		localStorage.setItem(k, JSON.stringify(v));
