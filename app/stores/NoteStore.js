@@ -18,15 +18,17 @@ class NoteStore {
 		});
 	}
 
-	update({id, task}) {
+	update(obj) {
 		let notes = this.notes;
-		const noteIndex = this.findNote(id);
+		const noteIndex = this.findNote(obj[0]);
+
+		// console.log('in update function, id:', obj[0], ' task: ', obj[1], ' object: ', obj);
 
 		if(noteIndex < 0){
 			return;
 		}
 
-		notes[noteIndex].task = task;
+		notes[noteIndex].task = obj[1];
 
 		this.setState({notes});
 	}
@@ -35,12 +37,14 @@ class NoteStore {
 		const notes = this.notes;
 		const noteIndex = this.findNote(id);
 
+		console.log('in delete function, id:', id);
+
 		if(noteIndex < 0){
 			return;
 		}
 
 		this.setState({
-			notes: notes.slice(0, noteIndex).concat(noteIndex + 1)
+			notes: notes.slice(0, noteIndex).concat(notes.slice(noteIndex + 1))
 		});
 
 	}
