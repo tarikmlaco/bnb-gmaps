@@ -7,7 +7,7 @@ export default class Places extends React.Component {
 
 		this.renderPlace = this.renderPlace.bind(this);
 	}
-	
+
 	render() {
 		const places = this.props.places;
 
@@ -15,6 +15,7 @@ export default class Places extends React.Component {
 	}
 
 	renderPlace(place) {
+		console.log('rendering places');
 		return (
 			<li className="place" key={place.id}>
 				<Place place={place}/>

@@ -23,6 +23,7 @@ export default class App extends React.Component {
 				<AltContainer stores={[PlaceStore]} inject={{ places: PlaceStore.getState().places || [] }}>
 					<Places />
 				</AltContainer>
+				<div id="map"></div>
 			</div>
 		);
 	}
