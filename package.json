@@ -1,7 +1,7 @@
 {
-  "name": "kanban",
+  "name": "mop-places",
   "version": "1.0.0",
-  "description": "React Example Kanban App",
+  "description": "React Example Mop Places App",
   "main": "app.js",
   "scripts": {
     "test": "test",
