@@ -23,8 +23,9 @@ export default class App extends React.Component {
 				<Searchbar/>
 				<AltContainer stores={[PlaceStore]} inject={{ places: PlaceStore.getState().places || [] }}>
 					<Places />
+					<Map />
 				</AltContainer>
-				<Map />
+				<div id="map"/>
 			</div>
 		);
 	}
