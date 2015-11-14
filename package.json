@@ -27,6 +27,7 @@
     "node-uuid": "^1.4.3",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
+    "react-gmaps": "^1.1.0",
     "react-script-loader": "0.0.1"
   }
 }

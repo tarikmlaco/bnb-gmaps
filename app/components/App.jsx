@@ -7,7 +7,7 @@ import LaneStore from '../stores/LaneStore';
 import Searchbar from './Searchbar.jsx';
 import PlaceStore from '../stores/PlaceStore';
 import Places from './Places.jsx';
-import Map from './Map.jsx';
+import Map from './GMaps.jsx';
 
 export default class App extends React.Component {
 
@@ -16,16 +16,11 @@ export default class App extends React.Component {
 
 		return (
 			<div>
-				<button className="add-lane" onClick={this.addItem}>+</button>
-				<AltContainer stores={[LaneStore]} inject={{ items: () => LaneStore.getState().lanes || [] }}>
-					<Lanes />
-				</AltContainer>
 				<Searchbar/>
 				<AltContainer stores={[PlaceStore]} inject={{ places: PlaceStore.getState().places || [] }}>
 					<Places />
 					<Map />
 				</AltContainer>
-				<div id="map"/>
 			</div>
 		);
 	}
