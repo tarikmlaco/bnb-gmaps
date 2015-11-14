@@ -2,11 +2,16 @@ import React from 'react';
 import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
 
 const coords = {
-  lat: 51.5258541,
-  lng: -0.08040660000006028
+  lat: 43.8568172,
+  lng: 18.4028613
 };
 
 export default class Map extends React.Component {
+	constructor(props){
+		super(props);
+
+		this.renderMarkers = this.renderMarkers.bind(this);
+	}
 
 	onMapCreated(map) {
 	    map.setOptions({
@@ -26,31 +31,22 @@ export default class Map extends React.Component {
 	console.log('onClick', e);
 	}
 
+	renderMarkers(place){
+		return <Marker lat={place.lat} lng={place.lng} draggable={false} />;
+	}
+
 	render() {
+		const places = this.props.places;
+
 		return (
 		  <Gmaps
 		    className="map-canvas"
 		    lat={coords.lat}
 		    lng={coords.lng}
-		    zoom={12}
-		    loadingMessage={'Be happy'}
+		    zoom={14}
 		    params={{v: '3.exp'}}
 		    onMapCreated={this.onMapCreated}>
-		    <Marker
-		      lat={coords.lat}
-		      lng={coords.lng}
-		      draggable={true}
-		      onDragEnd={this.onDragEnd} />
-		    <InfoWindow
-		      lat={coords.lat}
-		      lng={coords.lng}
-		      content={'Hello, React :)'}
-		      onCloseClick={this.onCloseClick} />
-		    <Circle
-		      lat={coords.lat}
-		      lng={coords.lng}
-		      radius={500}
-		      onClick={this.onClick} />
+		    {places.map(this.renderMarkers)}
 		  </Gmaps>
 		);
 	}

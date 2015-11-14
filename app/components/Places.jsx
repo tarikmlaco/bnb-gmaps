@@ -15,11 +15,7 @@ export default class Places extends React.Component {
 	}
 
 	renderPlace(place) {
-		console.log('rendering places');
-		return (
-			<li className="place" key={place.id}>
-				<Place place={place}/>
-			</li>
-		);
+		
+		return <Place key={place.id} place={place}/>;
 	}
 }
