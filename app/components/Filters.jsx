@@ -8,11 +8,11 @@ export default class Filters extends React.Component {
 	render(){
 		return (
 			<div className="categories">
-				<div className="category" onClick={this.props.setCategory('entertainment')}>Entertainment</div>
-				<div className="category" onClick={this.props.setCategory('government')}>Government</div>
-				<div className="category" onClick={this.props.setCategory('attraction')}>Attraction</div>
-				<div className="category" onClick={this.props.setCategory('religious')}>Religious</div>
-				<div className="category" onClick={this.props.setCategory('educational')}>Educational</div>
+				<div className="category" onClick={this.props.setQuery('entertainment')}>Entertainment</div>
+				<div className="category" onClick={this.props.setQuery('government')}>Government</div>
+				<div className="category" onClick={this.props.setQuery('attraction')}>Attraction</div>
+				<div className="category" onClick={this.props.setQuery('religious')}>Religious</div>
+				<div className="category" onClick={this.props.setQuery('educational')}>Educational</div>
 			</div>
 		);
 	}

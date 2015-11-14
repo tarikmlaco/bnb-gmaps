@@ -1,6 +1,5 @@
 import AltContainer from 'alt-container';
 import React from 'react';
-import PlaceActions from '../actions/PlaceActions';
 import PlaceStore from '../stores/PlaceStore';
 
 class Searchbar extends React.Component {
@@ -35,7 +34,7 @@ class Searchbar extends React.Component {
 		const query = e.target.value;
 
 		if(query){
-			PlaceActions.fetch({null, query});
+			this.props.setQuery(query);
 		}
 	}
 

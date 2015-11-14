@@ -9,14 +9,19 @@ import PlaceStore from '../stores/PlaceStore';
 import Places from './Places.jsx';
 import Map from './Map.jsx';
 import Filters from './Filters.jsx';
+import PlaceActions from '../actions/PlaceActions';
 
 export default class App extends React.Component {
 	constructor(props){
 		super(props);
 
-		this.category = '';
+		this.state = {
+			query: '',
+			filter: ''
+		}
 
-		this.setCategory = this.setCategory.bind(this);
+		this.setFilter = this.setFilter.bind(this);
+		this.setQuery = this.setQuery.bind(this);
 	}
 
 	render() {
@@ -24,8 +29,8 @@ export default class App extends React.Component {
 
 		return (
 			<div>
-				<Searchbar category={this.category}/>
-				<Filters setCategory={this.setCategory}/>
+				<Searchbar setQuery={this.setQuery}/>
+				<Filters setFilter={this.setFilter}/>
 				<AltContainer stores={[PlaceStore]} inject={{ places: PlaceStore.getState().places || [] }}>
 					<Places />
 					<Map />
@@ -34,8 +39,16 @@ export default class App extends React.Component {
 		);
 	}
 
-	setCategory(category) {
-		this.category = category;
+	setFilter(filter) {
+		// this.setState({filter: filter});
+		PlaceActions.fetch({this.state.filter, this.state.query});
+		this.setState({filter: filter});
+	}
+
+	setQuery(query) {
+		// this.setState({query: query});
+		PlaceActions.fetch({ this.state.filter, this.state.query});
+		this.setState({query: query});
 	}
 
 }
