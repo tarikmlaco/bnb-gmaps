@@ -27,10 +27,7 @@ function main() {
 
 
 	const app = document.createElement('div');
-	const script = document.createElement('script');
-	script.src = 'http://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js';
 	document.body.appendChild(app);
-	document.body.appendChild(script);
 	
 	ReactDOM.render(<App />, app);
 }

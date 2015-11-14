@@ -7,6 +7,7 @@ import LaneStore from '../stores/LaneStore';
 import Searchbar from './Searchbar.jsx';
 import PlaceStore from '../stores/PlaceStore';
 import Places from './Places.jsx';
+import Map from './Map.jsx';
 
 export default class App extends React.Component {
 
@@ -23,7 +24,7 @@ export default class App extends React.Component {
 				<AltContainer stores={[PlaceStore]} inject={{ places: PlaceStore.getState().places || [] }}>
 					<Places />
 				</AltContainer>
-				<div id="map"></div>
+				<Map />
 			</div>
 		);
 	}
@@ -31,5 +32,4 @@ export default class App extends React.Component {
 	addItem() {
 		LaneActions.create({name: 'New lane'});
 	}
-
 }
