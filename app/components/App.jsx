@@ -5,11 +5,12 @@ import Lanes from './Lanes.jsx';
 import LaneActions from '../actions/LaneActions';
 import LaneStore from '../stores/LaneStore';
 import Searchbar from './Searchbar.jsx';
+import PlaceActions from '../actions/PlaceActions';
 import PlaceStore from '../stores/PlaceStore';
 import Places from './Places.jsx';
 import Map from './Map.jsx';
 import Filters from './Filters.jsx';
-import PlaceActions from '../actions/PlaceActions';
+
 
 export default class App extends React.Component {
 	constructor(props){
@@ -41,14 +42,16 @@ export default class App extends React.Component {
 
 	setFilter(filter) {
 		// this.setState({filter: filter});
-		PlaceActions.fetch({this.state.filter, this.state.query});
+		// PlaceActions.fetch({this.state.filter, this.state.query});
 		this.setState({filter: filter});
+		console.log('filter set, state: ', this.state);
 	}
 
 	setQuery(query) {
 		// this.setState({query: query});
-		PlaceActions.fetch({ this.state.filter, this.state.query});
+		// PlaceActions.fetch({ this.state.filter, this.state.query});
 		this.setState({query: query});
+		console.log('query set, state: ', this.state);
 	}
 
 }
