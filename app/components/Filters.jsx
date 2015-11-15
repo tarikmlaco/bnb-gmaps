@@ -22,6 +22,7 @@ export default class Filters extends React.Component {
 	}
 
 	setFilter(e) {
+		
 		const filter = e.target.value;
 		console.log('setFilter called: ', e.target.value);
 		PlaceActions.fetch({filter: filter, query: null});

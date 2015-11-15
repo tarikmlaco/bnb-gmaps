@@ -11,24 +11,13 @@ export default class Map extends React.Component {
 		super(props);
 
 		this.renderMarkers = this.renderMarkers.bind(this);
+        this.onMapCreated = this.onMapCreated.bind(this); //not necessary, but maintaining convention
 	}
 
 	onMapCreated(map) {
 	    map.setOptions({
 	      disableDefaultUI: true
 	    });
-	}
-
-	onDragEnd(e) {
-	console.log('onDragEnd', e);
-	}
-
-	onCloseClick() {
-	console.log('onCloseClick');
-	}
-
-	onClick(e) {
-	console.log('onClick', e);
 	}
 
 	renderMarkers(place){
