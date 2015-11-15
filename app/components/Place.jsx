@@ -10,12 +10,12 @@ export default class Place extends React.Component {
 
 		//Note to self: state must be immutable, use const
 
-		const props = this.props;
+		const place = this.props.place;
 
 		return (
 		<div className="place">
-			<h3>{this.props.place.name}</h3>
-			<h5>{this.props.place.description}</h5>
+			<h3>{place.name}</h3>
+			<h5>{place.description}</h5>
 		</div>
 		);
 	}
