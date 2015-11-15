@@ -20,7 +20,7 @@ class PlaceStore {
 
 		const places = dummylib(_filter, _query);
 
-		console.log('dummylib called, parameters: ', _filter, _query, 'places: ', places);
+		console.log('dummylib called, parameters: ', _filter, _query, 'places: ', places.map((place) => place.name));
 
 		this.setState({
 			places: places,
