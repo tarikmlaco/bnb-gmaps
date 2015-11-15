@@ -8,15 +8,24 @@ class PlaceStore {
 
 		this.bindActions(PlaceActions);
 		this.places = [];
+		this.filter = '';
+		this.query = '';
 
 	}
 
 	fetch({filter, query}) {
-		const places = dummylib(filter, query);
-		console.log('dummylib called, places: ', places);
+
+		const _filter = filter ? filter : this.filter;
+		const _query = query ? query : this.query;
+
+		const places = dummylib(_filter, _query);
+
+		console.log('dummylib called, parameters: ', _filter, _query, 'places: ', places);
 
 		this.setState({
-			places: places
+			places: places,
+			filter: _filter,
+			query: _query
 		});
 	}
 }

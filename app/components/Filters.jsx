@@ -3,19 +3,28 @@ import PlaceActions from '../actions/PlaceActions';
 import PlaceStore from '../stores/PlaceStore';
 
 export default class Filters extends React.Component {
-	constructor(props){
+	constructor(props) {
 		super(props);
+
+		this.setFilter = this.setFilter.bind(this);
 	}
 
-	render(){
+	render() {
 		return (
 			<div className="categories">
-				<div className="category" onClick={this.props.setFilter('entertainment')}>Entertainment</div>
-				<div className="category" onClick={this.props.setFilter('government')}>Government</div>
-				<div className="category" onClick={this.props.setFilter('attraction')}>Attraction</div>
-				<div className="category" onClick={this.props.setFilter('religious')}>Religious</div>
-				<div className="category" onClick={this.props.setFilter('educational')}>Educational</div>
+				<button className="category" onClick={this.setFilter} value={'entertainment'}>Entertainment</button>
+				<button className="category" onClick={this.setFilter} value={'government'}>Government</button>
+				<button className="category" onClick={this.setFilter} value={'attraction'}>Attraction</button>
+				<button className="category" onClick={this.setFilter} value={'religious'}>Religious</button>
+				<button className="category" onClick={this.setFilter} value={'educational'}>Educational</button>
 			</div>
 		);
 	}
+
+	setFilter(e) {
+		const filter = e.target.value;
+		console.log('setFilter called: ', e.target.value);
+		PlaceActions.fetch({filter: filter, query: null});
+	}
+
 }

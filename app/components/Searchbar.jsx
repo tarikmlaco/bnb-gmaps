@@ -35,7 +35,7 @@ class Searchbar extends React.Component {
 		const query = e.target.value;
 
 		if(query){
-			this.props.setQuery(query);
+			PlaceActions.fetch({filter: null, query: query});
 		}
 	}
 

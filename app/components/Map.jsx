@@ -32,7 +32,7 @@ export default class Map extends React.Component {
 	}
 
 	renderMarkers(place){
-		return <Marker lat={place.lat} lng={place.lng} draggable={false} />;
+		return <Marker lat={place.lat} lng={place.lng} draggable={false} key={place.id} />;
 	}
 
 	render() {

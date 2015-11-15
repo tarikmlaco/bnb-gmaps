@@ -27,9 +27,9 @@ function main() {
 
 
 	const app = document.createElement('div');
-	const script = document.createElement('script');
-	script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initializeMaps";
-	script.type = "text/javascript";
+	// const script = document.createElement('script');
+	// script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initializeMaps";
+	// script.type = "text/javascript";
 	document.body.appendChild(app);
 	// document.body.appendChild(script);
 	
