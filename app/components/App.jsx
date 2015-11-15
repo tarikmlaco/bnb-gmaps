@@ -26,7 +26,7 @@ export default class App extends React.Component {
 			<div>
 				<Searchbar />
 				<Filters />
-				<AltContainer stores={[PlaceStore]} inject={{ places: PlaceStore.getState().places || [] }}>
+				<AltContainer stores={[PlaceStore]} inject={{ places: function(props){ return PlaceStore.getState().places || []; }}}>
 					<Places />
 					<Map />
 				</AltContainer>
