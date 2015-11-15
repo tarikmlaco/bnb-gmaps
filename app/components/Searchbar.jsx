@@ -14,9 +14,9 @@ class Searchbar extends React.Component {
 	}
 
 	render() {
-		console.log('component re-rendered');
+		// console.log('component re-rendered');
 		return(
-	      <div className="searchForm" >
+	      <div className="search-bar" >
 	      <AltContainer stores={[PlaceStore]}>
 	        <input type="text" placeholder="Looking for..." onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
 	      </AltContainer>
@@ -24,13 +24,10 @@ class Searchbar extends React.Component {
 		);
 	}
 
-	// searchPlace(query) {
-	// 	PlaceActions.fetch(null, query);
-	// }
 
 	finishEdit(e) {
 
-		console.log('finishEdit called', e.target.value);
+		// console.log('finishEdit called', e.target.value);
 
 		const query = e.target.value;
 
@@ -40,8 +37,7 @@ class Searchbar extends React.Component {
 	}
 
 	checkEnter(e) {
-
-		console.log('checkEnter called');
+		// console.log('checkEnter called');
 
 		if(e.key === 'Enter'){
 			this.finishEdit(e);

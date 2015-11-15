@@ -18,28 +18,20 @@ export default class Map extends React.Component {
 	}
 
 	onMapCreated(map) {
-        console.log('calling onMapCreated');
+        // console.log('calling onMapCreated');
 	    map.setOptions({
 	      disableDefaultUI: true
 	    });
 	}
 
     renderMarkers(place) {
-        console.log('Render markers called');
+        // console.log('Render markers called');
         return <Marker lat={place.lat} lng={place.lng} draggable={false} />;
     }
 
 	render() {
 		const places = this.props.places;
-        console.log('map render called, places: ', places.map((place) => place.name));
-        // inject={{places: (props) => {return PlaceStore.getState().places || []; }}}
-        // {places.map(this.renderMarkers)}
-
-        //Need to use a "hack" for Markers, component separation causes marker rendering to never happen
-
-        // <AltContainer stores={[PlaceStore]} inject={{places: (props) => {return PlaceStore.getState().places || []; }}}>
-        //     { PlaceStore.getState().places.map(this.renderMarkers) }
-        // </AltContainer>
+        // console.log('map render called, places: ', places.map((place) => place.name));
 
 		return (
 		  <Gmaps
@@ -55,24 +47,3 @@ export default class Map extends React.Component {
 	}
 
 }
-
-
-/*
-class Markers extends React.Component {
-
-    constructor(props){
-        super(props);
-
-        this.renderMarkers = this.renderMarkers.bind(this);
-    }
-
-    render() {
-
-        const places = this.props.places;
-        console.log('Render method in Markers called');
-
-        return <ol>{places.map(this.renderMarkers)}</ol>;
-    }
-
-}
-*/

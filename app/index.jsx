@@ -1,13 +1,3 @@
-/* require('./main.css');
-var component = require('./component');
-var app = document.createElement('div');
-
-document.body.appendChild(app);
-
-app.appendChild(component());
-
-*/
-
 import './main.css';
 import 'array.prototype.findindex';
 
@@ -31,7 +21,6 @@ function main() {
 	// script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initializeMaps";
 	// script.type = "text/javascript";
 	document.body.appendChild(app);
-	// document.body.appendChild(script);
 	
 	ReactDOM.render(<App />, app);
 }
