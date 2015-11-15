@@ -1,5 +1,6 @@
 import React from 'react';
 import Place from './Place.jsx';
+import PlaceStore from '../stores/PlaceStore';
 
 export default class Places extends React.Component {
 	constructor(props) {
@@ -10,6 +11,8 @@ export default class Places extends React.Component {
 
 	render() {
 		const places = this.props.places;
+		console.log('Place rendering called, places:', places.map((place) => place.name ));
+		console.log('PlaceStore state:', PlaceStore.getState().places.map((place) => place.name ));
 
 		return <ul className="places">{places.map(this.renderPlace)}</ul>;
 	}

@@ -20,6 +20,8 @@ export default class App extends React.Component {
 	render() {
 		//Note to self: keep the state immutable
 
+		console.log('PlaceStore called: ', PlaceStore.getState().places );
+
 		return (
 			<div>
 				<Searchbar />
