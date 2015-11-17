@@ -1,6 +1,7 @@
 import React from 'react';
 import PlaceActions from '../actions/PlaceActions';
 import PlaceStore from '../stores/PlaceStore';
+import ComponentHandler from '../libs/material';
 
 export default class Filters extends React.Component {
 	constructor(props) {
@@ -9,14 +10,18 @@ export default class Filters extends React.Component {
 		this.setFilter = this.setFilter.bind(this);
 	}
 
+	componentDidUpdate(){
+		ComponentHandler.upgradeDom();
+	}
+
 	render() {
 		return (
 			<div className="categories">
-				<button className="category" onClick={this.setFilter} value={'entertainment'}>Entertainment</button>
-				<button className="category" onClick={this.setFilter} value={'government'}>Government</button>
-				<button className="category" onClick={this.setFilter} value={'attraction'}>Attraction</button>
-				<button className="category" onClick={this.setFilter} value={'religious'}>Religious</button>
-				<button className="category" onClick={this.setFilter} value={'educational'}>Educational</button>
+				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'entertainment'}>Entertainment</button>
+				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'government'}>Government</button>
+				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'attraction'}>Attraction</button>
+				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'religious'}>Religious</button>
+				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'educational'}>Educational</button>
 			</div>
 		);
 	}

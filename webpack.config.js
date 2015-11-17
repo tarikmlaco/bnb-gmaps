@@ -25,6 +25,14 @@ var common = {
       	test: /\.jsx?$/,
       	loaders: ['babel'],
       	include: APP_PATH
+      },
+      { 
+        test: /\.js$/,
+        loader: 'exports-loader'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
   },

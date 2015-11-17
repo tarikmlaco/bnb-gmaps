@@ -24,10 +24,15 @@
     "alt": "^0.17.8",
     "alt-container": "^1.0.0",
     "array.prototype.findindex": "^1.0.0",
+    "exports-loader": "^0.6.2",
+    "material-design-lite": "^1.0.6",
+    "node-sass": "^3.4.2",
     "node-uuid": "^1.4.3",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-gmaps": "^1.1.0",
-    "react-script-loader": "0.0.1"
+    "react-script-loader": "0.0.1",
+    "sass-loader": "^3.1.1",
+    "webpack": "^1.12.6"
   }
 }

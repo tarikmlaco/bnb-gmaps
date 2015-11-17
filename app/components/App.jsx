@@ -5,13 +5,12 @@ import PlaceStore from '../stores/PlaceStore';
 import Places from './Places.jsx';
 import Map from './Map.jsx';
 import Filters from './Filters.jsx';
-
+import ComponentHandler from '../libs/material';
 
 export default class App extends React.Component {
 
 	render() {
 		//Note to self: keep the state immutable
-
 		return (
 			<div>
 				<Searchbar className="search-bar" />
@@ -23,5 +22,4 @@ export default class App extends React.Component {
 			</div>
 		);
 	}
-
 }
