@@ -16,12 +16,12 @@ export default class Filters extends React.Component {
 
 	render() {
 		return (
-			<div className="categories">
-				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'entertainment'}>Entertainment</button>
-				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'government'}>Government</button>
-				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'attraction'}>Attraction</button>
-				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'religious'}>Religious</button>
-				<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onClick={this.setFilter} value={'educational'}>Educational</button>
+			<div className="categories mdl-button-group">
+				<button className="mdl-button mdl-js-button mdl-js-ripple-effect" onClick={this.setFilter} value={'entertainment'}>Entertainment</button>
+				<button className="mdl-button mdl-js-button mdl-js-ripple-effect" onClick={this.setFilter} value={'government'}>Government</button>
+				<button className="mdl-button mdl-js-button mdl-js-ripple-effect" onClick={this.setFilter} value={'attraction'}>Attraction</button>
+				<button className="mdl-button mdl-js-button mdl-js-ripple-effect" onClick={this.setFilter} value={'religious'}>Religious</button>
+				<button className="mdl-button mdl-js-button mdl-js-ripple-effect" onClick={this.setFilter} value={'educational'}>Educational</button>
 			</div>
 		);
 	}

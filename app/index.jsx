@@ -1,4 +1,4 @@
-// import './main.css';
+import './main.css';
 // import '../node_modules/material-design-lite/dist/material.css';
 import '../node_modules/material-design-lite/src/material-design-lite.scss';
 // import 'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.grey-blue.min.css';
