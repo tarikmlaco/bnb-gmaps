@@ -33,6 +33,10 @@ var common = {
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass']
+      },
+      {
+      test: /\.woff$/,
+      loader: 'url?limit=100000'
       }
     ]
   },

@@ -2,8 +2,13 @@ import AltContainer from 'alt-container';
 import React from 'react';
 import PlaceActions from '../actions/PlaceActions';
 import PlaceStore from '../stores/PlaceStore';
+import ComponentHandler from '../libs/material';
 
 class Searchbar extends React.Component {
+	componentDidUpdate(){
+		ComponentHandler.upgradeDom();
+	}
+
 	constructor(props) {
 		super(props);
 
@@ -18,7 +23,10 @@ class Searchbar extends React.Component {
 		return(
 	      <div className="search-bar" >
 	      <AltContainer stores={[PlaceStore]}>
-	        <input type="text" placeholder="Looking for..." onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
+			    <div className="mdl-textfield-holder mdl-textfield mdl-js-textfield">
+			      <input placeholder="Looking for..." className="mdl-textfield__input" type="text" onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
+			      <label className="mdl-textfield__label"></label>
+			    </div>
 	      </AltContainer>
 	      </div>
 		);

@@ -1,6 +1,7 @@
 import './main.css';
 // import '../node_modules/material-design-lite/dist/material.css';
-import '../node_modules/material-design-lite/src/material-design-lite.scss';
+import 'material-design-lite/src/material-design-lite.scss';
+import 'material-design-icons/iconfont/MaterialIcons-Regular.woff';
 // import 'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.grey-blue.min.css';
 // import '../node_modules/material-design-lite/dist/material.grey-blue.min.css';
 import 'array.prototype.findindex';

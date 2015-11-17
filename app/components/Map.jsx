@@ -2,6 +2,7 @@ import React from 'react';
 import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
 import AltContainer from 'alt-container';
 import PlaceStore from '../stores/PlaceStore';
+import ComponentHandler from '../libs/material';
 
 const coords = {
   lat: 43.8568172,
@@ -15,6 +16,10 @@ export default class Map extends React.Component {
 
         this.onMapCreated = this.onMapCreated.bind(this); //not necessary, but maintaining convention
         this.renderMarkers = this.renderMarkers.bind(this);
+	}
+
+	componentDidUpdate(){
+		ComponentHandler.upgradeDom();
 	}
 
 	onMapCreated(map) {

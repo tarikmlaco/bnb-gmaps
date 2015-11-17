@@ -9,10 +9,14 @@ import ComponentHandler from '../libs/material';
 
 export default class App extends React.Component {
 
+	componentDidUpdate(){
+		ComponentHandler.upgradeDom();
+	}
+
 	render() {
 		//Note to self: keep the state immutable
 		return (
-			<div>
+			<div class="mdl-card">
 				<Searchbar className="search-bar" />
 				<Filters className="filters" />
 				<AltContainer stores={[PlaceStore]} inject={{ places: (props) => { return PlaceStore.getState().places || [] }}}>
