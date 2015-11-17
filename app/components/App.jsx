@@ -16,9 +16,11 @@ export default class App extends React.Component {
 	render() {
 		//Note to self: keep the state immutable
 		return (
-			<div class="mdl-card">
-				<Searchbar className="search-bar" />
-				<Filters className="filters" />
+			<div className="mdl-layout">
+				<header className="mdl-layout__header">
+					<Searchbar className="mdl-layout__header-row" />
+					<Filters className="mdl-layout__header-row filters" />
+				</header>
 				<AltContainer stores={[PlaceStore]} inject={{ places: (props) => { return PlaceStore.getState().places || [] }}}>
 					<Map />
 					<Places />

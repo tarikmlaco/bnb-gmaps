@@ -1,7 +1,6 @@
-import './main.css';
 // import '../node_modules/material-design-lite/dist/material.css';
 import 'material-design-lite/src/material-design-lite.scss';
-import 'material-design-icons/iconfont/MaterialIcons-Regular.woff';
+import './main.css';
 // import 'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.grey-blue.min.css';
 // import '../node_modules/material-design-lite/dist/material.grey-blue.min.css';
 import 'array.prototype.findindex';
@@ -26,7 +25,7 @@ function main() {
 	const app = document.createElement('div');
 
 	const font = document.createElement('link');
-	font.href = 'http://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
+	font.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
 	font.ref = 'stylesheet' ;
 	font.type='text/css';
 
