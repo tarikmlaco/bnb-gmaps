@@ -41,7 +41,7 @@ function main() {
 	// script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initializeMaps";
 	// script.type = "text/javascript";
 	document.body.appendChild(font);
-	document.body.appendChild(mdlcss);
+	// document.body.appendChild(mdlcss);
 	// document.body.appendChild(mdljs);
 	document.body.appendChild(app);
 	

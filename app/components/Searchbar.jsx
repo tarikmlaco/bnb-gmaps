@@ -23,10 +23,14 @@ class Searchbar extends React.Component {
 		return(
 	      <div className="search-bar">
 	      <AltContainer stores={[PlaceStore]}>
-	      	<img className="mdl-textfield--icon" src="../../node_modules/material-design-icons/action/svg/production/ic_search_48px.svg"/>
-			<div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				<input placeholder="" className="mdl-textfield__input" type="text" onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
-				<label className="mdl-textfield__label">Looking for...</label>
+	      	<div className="mdl-textfield mdl-js-textfield">
+	      		<label className="mdl-button mdl-js-button mdl-button--icon">
+		      		<i className="material-icons">search</i>
+		      	</label>
+				<div className="mdl-textfield-holder">
+					<input placeholder="" className="mdl-textfield__input" type="text" onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
+					<label className="mdl-textfield__label">Looking for...</label>
+				</div>
 			</div>
 	      </AltContainer>
 	      </div>
