@@ -18,13 +18,17 @@ export default class App extends React.Component {
 		return (
 			<div className="mdl-layout">
 				<header className="mdl-layout__header">
-					<Searchbar className="mdl-layout__header-row" />
-					<Filters className="mdl-layout__header-row filters" />
+					<div className="mdl-grid">
+						<Searchbar className="mdl-layout__header-row" />
+						<Filters className="mdl-layout__header-row filters" />
+					</div>
 				</header>
+				<div className="mdl-grid">
 				<AltContainer stores={[PlaceStore]} inject={{ places: (props) => { return PlaceStore.getState().places || [] }}}>
 					<Map />
 					<Places />
 				</AltContainer>
+				</div>
 			</div>
 		);
 	}
