@@ -16,16 +16,16 @@ class PlaceStore {
 
 	fetch({filter, query}) {
 
-		const _filter = filter ? filter : this.filter;
-		const _query = query ? query : this.query;
+		const filterstate = filter ? filter : this.filter;
+		const querystate = query ? query : this.query;
 
 
 
-		$.post('http://localhost:3000/places', {query: _query, filter: _filter}, (response)=>{
+		$.post('http://localhost:3000/places', {query: querystate, filter: filtstate}, (response)=>{
 			this.setState({
 				places: response,
-				filter: _filter,
-				query: _query
+				filter: filtstate,
+				query: querystate
 			})
 		});
 

@@ -12,14 +12,13 @@ class Searchbar extends React.Component {
 	constructor(props) {
 		super(props);
 
-		// this.searchPlace = this.searchPlace.bind(this);
 		this.finishEdit = this.finishEdit.bind(this);
 		this.checkEnter = this.checkEnter.bind(this);
 
 	}
 
 	render() {
-		// console.log('component re-rendered');
+
 		return(
 	      <AltContainer stores={[PlaceStore]}>
 				<div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -33,8 +32,6 @@ class Searchbar extends React.Component {
 
 	finishEdit(e) {
 
-		// console.log('finishEdit called', e.target.value);
-
 		const query = e.target.value;
 
 		if(query){
@@ -43,7 +40,6 @@ class Searchbar extends React.Component {
 	}
 
 	checkEnter(e) {
-		// console.log('checkEnter called');
 
 		if(e.key === 'Enter'){
 			this.finishEdit(e);

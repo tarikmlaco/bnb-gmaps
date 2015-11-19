@@ -14,7 +14,7 @@ export default class Map extends React.Component {
 	constructor(props){
 		super(props);
 
-        this.onMapCreated = this.onMapCreated.bind(this); //not necessary, but maintaining convention
+        this.onMapCreated = this.onMapCreated.bind(this);
         this.renderMarkers = this.renderMarkers.bind(this);
 	}
 
@@ -23,20 +23,18 @@ export default class Map extends React.Component {
 	}
 
 	onMapCreated(map) {
-        // console.log('calling onMapCreated');
+
 	    map.setOptions({
 	      disableDefaultUI: true
 	    });
 	}
 
     renderMarkers(place) {
-        // console.log('Render markers called');
         return <Marker lat={place.lat} lng={place.lng} draggable={false} />;
     }
 
 	render() {
 		const places = this.props.places;
-        // console.log('map render called, places: ', places.map((place) => place.name));
 
 		return (
 		  <Gmaps

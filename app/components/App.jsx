@@ -14,7 +14,7 @@ export default class App extends React.Component {
 	}
 
 	render() {
-		//Note to self: keep the state immutable
+		
 		return (
 			<div className="mdl-layout">
 				<div className="mdl-grid">

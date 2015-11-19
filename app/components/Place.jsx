@@ -13,8 +13,6 @@ export default class Place extends React.Component {
 
 	render() {
 
-		//Note to self: state must be immutable, use const
-
 		const place = this.props.place;
 
 		return (
