@@ -18,7 +18,7 @@ export default class Places extends React.Component {
 		
 		const places = this.props.places;
 
-		return <div className="places">{places.map(this.renderPlace)}</div>;
+		return <div className="mdl-cell--12-col">{places.map(this.renderPlace)}</div>;
 	}
 
 	renderPlace(place) {

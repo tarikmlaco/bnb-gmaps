@@ -14,20 +14,21 @@ export default class App extends React.Component {
 	}
 
 	render() {
-		
+
 		return (
 			<div className="mdl-layout">
 				<div className="mdl-grid">
 					<div className="mdl-card mdl-shadow--2dp mdl-cell--12-col">
 						<div className="mdl-grid">
 							<Searchbar />
+							<br/>
 							<Filters className="filters" />
 						</div>
 					</div>
 					<div className="mdl-cell--12-col">
 					<AltContainer stores={[PlaceStore]} inject={{ places: (props) => { return PlaceStore.getState().places || [] }}}>
-						<Map className="mdl-cell mdl-cell--4-col"/>
-						<Places className="mdl-cell mdl-cell--4-col" />
+						<Map className="mdl-cell mdl-cell--12-col"/>
+						<Places className="mdl-cell mdl-cell--12-col" />
 					</AltContainer>
 					</div>
 				</div>
