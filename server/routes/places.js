@@ -171,7 +171,7 @@ var myFuse = (function(){
 		keys: ['name', 'type']
 	};
 
-	var fuse = new Fuse;
+	var fuse = new Fuse(places, options);
 
 	return {
 		search: function(query){
