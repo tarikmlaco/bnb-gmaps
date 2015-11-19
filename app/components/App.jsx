@@ -27,8 +27,8 @@ export default class App extends React.Component {
 					</div>
 					<div className="mdl-cell--12-col">
 					<AltContainer stores={[PlaceStore]} inject={{ places: (props) => { return PlaceStore.getState().places || [] }}}>
-						<Map className="mdl-cell mdl-cell--12-col"/>
-						<Places className="mdl-cell mdl-cell--12-col" />
+						<Map className="mdl-cell mdl-cell--6-col"/>
+						<Places className="mdl-cell mdl-cell--6-col" />
 					</AltContainer>
 					</div>
 				</div>
