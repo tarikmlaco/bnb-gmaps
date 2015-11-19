@@ -18,7 +18,7 @@ export default class App extends React.Component {
 		return (
 			<div className="mdl-layout">
 				<div className="mdl-grid">
-					<div className="mdl-card mdl-shadow--2dp mdl-cell--2-col">
+					<div className="mdl-card mdl-shadow--2dp mdl-cell--12-col">
 						<div className="mdl-grid">
 							<Searchbar />
 							<Filters className="filters" />

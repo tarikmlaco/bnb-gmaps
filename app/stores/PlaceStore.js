@@ -19,14 +19,16 @@ class PlaceStore {
 		const _filter = filter ? filter : this.filter;
 		const _query = query ? query : this.query;
 
-		$.post('http://localhost:3000/places', {query: _query}, (response)=>{
+
+
+		$.post('http://localhost:3000/places', {query: _query, filter: _filter}, (response)=>{
 			this.setState({
 				places: response,
 				filter: _filter,
 				query: _query
 			})
 		});
-		
+
 	}
 }
 
