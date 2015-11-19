@@ -5,6 +5,14 @@ export default function(alt, storage, storeName) {
 
 	try {
 		alt.bootstrap(storage.get(storeName));
+		// alt.bootstrap(JSON.stringify({
+		// 			  PlaceStore: {
+		// 			    places: [],
+		// 			    filter: '',
+		// 			    query: ''
+		// 			  }
+		// 			}));
+
 	}
 	catch(e) {
 		console.error('Failed to bootstrap data', e);
