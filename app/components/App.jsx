@@ -17,17 +17,19 @@ export default class App extends React.Component {
 		//Note to self: keep the state immutable
 		return (
 			<div className="mdl-layout">
-				<header className="mdl-layout__header">
-					<div className="mdl-grid">
-						<Searchbar className="mdl-layout__header-row" />
-						<Filters className="mdl-layout__header-row filters" />
-					</div>
-				</header>
 				<div className="mdl-grid">
-				<AltContainer stores={[PlaceStore]} inject={{ places: (props) => { return PlaceStore.getState().places || [] }}}>
-					<Map className="mdl-cell mdl-cell--4-col"/>
-					<Places className="mdl-cell mdl-cell--4-col" />
-				</AltContainer>
+					<div className="mdl-card mdl-shadow--2dp mdl-cell--2-col">
+						<div className="mdl-grid">
+							<Searchbar />
+							<Filters className="filters" />
+						</div>
+					</div>
+					<div className="mdl-cell--12-col">
+					<AltContainer stores={[PlaceStore]} inject={{ places: (props) => { return PlaceStore.getState().places || [] }}}>
+						<Map className="mdl-cell mdl-cell--4-col"/>
+						<Places className="mdl-cell mdl-cell--4-col" />
+					</AltContainer>
+					</div>
 				</div>
 			</div>
 		);

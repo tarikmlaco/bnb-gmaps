@@ -18,7 +18,7 @@ export default class Place extends React.Component {
 		const place = this.props.place;
 
 		return (
-		<div className="place">
+		<div className="mdl-card">
 			<h3>{place.name}</h3>
 			<h5>{place.description}</h5>
 		</div>

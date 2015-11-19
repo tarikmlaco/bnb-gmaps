@@ -21,19 +21,12 @@ class Searchbar extends React.Component {
 	render() {
 		// console.log('component re-rendered');
 		return(
-	      <div className="search-bar">
 	      <AltContainer stores={[PlaceStore]}>
-	      	<div className="mdl-textfield mdl-js-textfield">
-	      		<label className="mdl-button mdl-js-button mdl-button--icon">
-		      		<i className="material-icons">search</i>
-		      	</label>
-				<div className="mdl-textfield-holder">
-					<input placeholder="" className="mdl-textfield__input" type="text" onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
+				<div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input className="mdl-textfield__input" type="text" onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
 					<label className="mdl-textfield__label">Looking for...</label>
 				</div>
-			</div>
 	      </AltContainer>
-	      </div>
 		);
 	}
 
