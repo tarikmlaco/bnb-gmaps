@@ -19,16 +19,6 @@ class PlaceStore {
 		const _filter = filter ? filter : this.filter;
 		const _query = query ? query : this.query;
 
-		// const places = dummylib(_filter, _query);
-/*
-		$.get('http://localhost:3000/places', (response)=>{
-			this.setState({
-				places: response,
-				filter: _filter,
-				query: _query
-			})
-		});
-*/
 		$.post('http://localhost:3000/places', {query: _query}, (response)=>{
 			this.setState({
 				places: response,
@@ -36,14 +26,7 @@ class PlaceStore {
 				query: _query
 			})
 		});
-
-		// console.log('dummylib called, parameters: ', _filter, _query, 'places: ', places.map((place) => place.name));
-
-		// this.setState({
-		// 	places: places,
-		// 	filter: _filter,
-		// 	query: _query
-		// });
+		
 	}
 }
 

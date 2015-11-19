@@ -172,8 +172,12 @@ module.exports = (function(){
 	var fuse = new Fuse(places, options);
 
 	return {
-		search: function(query){
-			return fuse.search(query) || [];
+		search: function(query, filter) {
+			return fuse.search(query).filter(
+				function(place){
+					return filter === null ? true : (place.type === filter)
+				}
+			) || [];
 		}
 	}
 })();
