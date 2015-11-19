@@ -171,13 +171,33 @@ module.exports = (function(){
 
 	var fuse = new Fuse(places, options);
 
-	return {
-		search: function(query, filter) {
-			return fuse.search(query).filter(
-				function(place){
-					return filter === null ? true : (place.type === filter)
-				}
-			) || [];
+	var isProperString = function(string) {
+		return !((string === null) || (string === undefined) || (string === ''));
+	};
+
+	var searchFun = function(query, filter) {
+
+		if (isProperString(query)){
+
+			if(isProperString(filter)){
+				return fuse.search(query).filter(function(place) {return place.type === filter});
+			} else {
+				return fuse.search(query);
+			}
+
+		} else {
+
+			if(isProperString(filter)){
+				return places.filter(function(place) { return place.type === filter });
+			} else {
+				return places;
+			}
 		}
 	}
+
+
+	return {
+		search: searchFun
+	};
+	
 })();

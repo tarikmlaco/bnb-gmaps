@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {;
 
 router.post('/', function(req, res, next){
 
-	res.json(myFuse.search(req.body.query));
+	res.json(myFuse.search(req.body.query, req.body.filter));
 });
 
 module.exports = router;
