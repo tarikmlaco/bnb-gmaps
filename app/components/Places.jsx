@@ -17,8 +17,8 @@ export default class Places extends React.Component {
 	render() {
 		
 		const places = this.props.places;
-		
-		return <ul className="places">{places.map(this.renderPlace)}</ul>;
+
+		return <div className="places">{places.map(this.renderPlace)}</div>;
 	}
 
 	renderPlace(place) {

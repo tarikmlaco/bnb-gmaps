@@ -21,10 +21,10 @@ class PlaceStore {
 
 
 
-		$.post('http://localhost:3000/places', {query: querystate, filter: filtstate}, (response)=>{
+		$.post('http://localhost:3000/places', {query: querystate, filter: filterstate}, (response)=>{
 			this.setState({
 				places: response,
-				filter: filtstate,
+				filter: filterstate,
 				query: querystate
 			})
 		});
