@@ -1,6 +1,5 @@
 import alt from '../libs/alt';
 import PlaceActions from '../actions/PlaceActions';
-import dummylib from '../libs/dummylib';
 import $ from 'webpack-zepto';
 
 class PlaceStore {
