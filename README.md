@@ -10,24 +10,24 @@ In order to run the app successfully, you need to have Node Package Management (
 
 After you have cloned the repository (using git), or extracted the files in a folder, in the project root folder, execute:
 
-'''
+```
 $ npm install
-'''
+```
 
 In order to run the server successfully, you will also need to go to the folder server, and run npm install as well.
 
-'''
+```
 $ cd server
 $ npm install
-'''
+```
 
 Depending on your configuration, you may also need to allow npm administrative rights, by typing 'sudo' before other commands.
 
 After you have successfully built the required depenendencies, go back to the project root folder and type:
 
-'''
+```
 $ npm start
-'''
+```
 
 And that should be it!
 
