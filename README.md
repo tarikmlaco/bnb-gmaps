@@ -31,18 +31,9 @@ $ npm start
 
 And that should be it!
 
-
 ## Usage Reference
 
 Open http://localhost:8080 in your browser, and check out the cool map, search bar and the filters ;)
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 
 ## License
 
