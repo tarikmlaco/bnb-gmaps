@@ -34,19 +34,19 @@ export default class Filters extends React.Component {
 	}
 
 	componentDidUpdate(){
-		ComponentHandler.upgradeDom();
+		// ComponentHandler.upgradeDom();
 	}
 
 	render() {
 		const filters = this.filters;
 
 		return (
-			<div className="">{filters.map(this.renderFilter)}</div>
+			<div className="filters">{filters.map(this.renderFilter)}</div>
 		);
 	}
 
 	renderFilter(filter) {
-		return <button className="mdl-button mdl-js-button mdl-js-ripple-effect" onClick={this.setFilter} value={filter.value}>{filter.text}</button>;
+		return <button id={filter.value} className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-cell--12-col" onClick={this.setFilter} value={filter.value}>{filter.text}</button>;
 	}
 
 	setFilter(e) {
@@ -54,6 +54,7 @@ export default class Filters extends React.Component {
 		const filter = e.target.value;
 
 		PlaceActions.fetch({filter: filter, query: null});
+		console.log('PlaceActions called!');
 	}
 
 }

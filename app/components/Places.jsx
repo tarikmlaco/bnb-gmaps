@@ -11,7 +11,7 @@ export default class Places extends React.Component {
 	}
 
 	componentDidUpdate(){
-		ComponentHandler.upgradeDom();
+		// ComponentHandler.upgradeDom();
 	}
 
 	render() {

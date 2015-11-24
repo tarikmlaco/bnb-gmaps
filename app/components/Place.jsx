@@ -7,7 +7,7 @@ export default class Place extends React.Component {
 	}
 
 	componentDidUpdate(){
-		ComponentHandler.upgradeDom();
+		// ComponentHandler.upgradeDom();
 	}
 
 
@@ -16,7 +16,7 @@ export default class Place extends React.Component {
 		const place = this.props.place;
 
 		return (
-		<div className="mdl-card">
+		<div className="filters">
 			<h3>{place.name}</h3>
 			<h5>{place.description}</h5>
 		</div>

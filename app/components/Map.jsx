@@ -19,7 +19,7 @@ export default class Map extends React.Component {
 	}
 
 	componentDidUpdate(){
-		ComponentHandler.upgradeDom();
+		// ComponentHandler.upgradeDom();
 	}
 
 	onMapCreated(map) {
@@ -30,7 +30,7 @@ export default class Map extends React.Component {
 	}
 
     renderMarkers(place) {
-        return <Marker lat={place.lat} lng={place.lng} draggable={false} />;
+    	return <Marker lat={place.lat} lng={place.lng} draggable={false} />;
     }
 
 	render() {
