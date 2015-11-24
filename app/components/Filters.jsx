@@ -41,12 +41,12 @@ export default class Filters extends React.Component {
 		const filters = this.filters;
 
 		return (
-			<div className="filters">{filters.map(this.renderFilter)}</div>
+			<div className="filters mdl-cell--12-col">{filters.map(this.renderFilter)}</div>
 		);
 	}
 
 	renderFilter(filter) {
-		return <button id={filter.value} className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-cell--12-col" onClick={this.setFilter} value={filter.value}>{filter.text}</button>;
+		return <button id={filter.value} className="mdl-button mdl-js-button mdl-js-ripple-effect" onClick={this.setFilter} value={filter.value}>{filter.text}</button>;
 	}
 
 	setFilter(e) {

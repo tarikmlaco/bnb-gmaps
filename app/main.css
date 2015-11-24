@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 body {
-	background: cornsilk;
+	/*background: cornsilk;*/
 	font-family: sans-serif;
 	width: 100%;
 }
@@ -129,4 +129,5 @@ img {
 .filters {
   background-color: white;
   border-radius: 2px;
+  text-align: center;
 }
