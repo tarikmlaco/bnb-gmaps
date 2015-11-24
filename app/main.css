@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
 body {
-	/*background: cornsilk;*/
+	background: #213742;
 	font-family: sans-serif;
 	width: 100%;
 }
@@ -127,7 +128,17 @@ img {
 }
 
 .filters {
-  background-color: white;
-  border-radius: 2px;
+  background-color: #7694AE;
+  border-radius: 15px;
   text-align: center;
+  margin-left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto';
+}
+
+.mdl-layout__header {
+  background-color: #0564BD;
+  font-family: 'Roboto';
 }
