@@ -17,7 +17,7 @@ export default class Place extends React.Component {
 
 		return (
 		<div className="filters">
-			<h3>{place.name}</h3>
+			<h4>{place.name}</h4>
 			<h5>{place.description}</h5>
 		</div>
 		);
