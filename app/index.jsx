@@ -19,12 +19,6 @@ function main() {
 
 	const app = document.createElement('div');
 
-	const font = document.createElement('link');
-	font.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
-	font.ref = 'stylesheet' ;
-	font.type='text/css';
-
-	document.body.appendChild(font);
 	document.body.appendChild(app);
 	
 	ReactDOM.render(<App />, app);
