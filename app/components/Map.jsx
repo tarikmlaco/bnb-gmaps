@@ -19,7 +19,7 @@ export default class Map extends React.Component {
 	}
 
 	componentDidUpdate(){
-		// ComponentHandler.upgradeDom();
+		ComponentHandler.upgradeDom();
 	}
 
 	onMapCreated(map) {

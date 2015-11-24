@@ -6,7 +6,7 @@ import ComponentHandler from '../libs/material';
 
 class Searchbar extends React.Component {
 	componentDidUpdate(){
-		// ComponentHandler.upgradeDom();
+		ComponentHandler.upgradeDom();
 	}
 
 	constructor(props) {
@@ -47,12 +47,3 @@ class Searchbar extends React.Component {
 
 
 export default Searchbar;
-
-/*
-	      <AltContainer stores={[PlaceStore]}>
-				<div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input className="mdl-textfield__input" type="text" onKeyPress={this.checkEnter} onBlur={this.finishEdit}/>
-					<label className="mdl-textfield__label">Looking for...</label>
-				</div>
-	      </AltContainer>
-*/

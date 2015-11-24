@@ -34,7 +34,7 @@ export default class Filters extends React.Component {
 	}
 
 	componentDidUpdate(){
-		// ComponentHandler.upgradeDom();
+		ComponentHandler.upgradeDom();
 	}
 
 	render() {

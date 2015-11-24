@@ -7,7 +7,7 @@ export default class Place extends React.Component {
 	}
 
 	componentDidUpdate(){
-		// ComponentHandler.upgradeDom();
+		ComponentHandler.upgradeDom();
 	}
 
 
